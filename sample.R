@@ -1,7 +1,8 @@
 library(rstan)
 library(here)
 library(dplyr)
-
+options(mc.cores = parallel::detectCores())
+rstan_options(auto_write = TRUE)
 N = 100
 mean = 6
 sd = 2
